@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "name": "service-booking-app",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/line/webhook",
+      "dest": "/api/line/webhook"
+    },
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "app/api/line/webhook/route.ts": {
+      "maxDuration": 30
+    },
+    "app/api/notify/route.ts": {
+      "maxDuration": 30
+    }
+  }
+}

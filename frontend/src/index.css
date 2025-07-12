@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #d4a43c;
+  --background: #2f2f2f;
+  --text: #ffffff;
+  --text-secondary: #cccccc;
+  --card-bg: #3a3a3a;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+.gold-text {
+  color: var(--primary);
+}
+
+.btn-primary {
+  @apply bg-[#d4a43c] text-white font-medium py-2 px-4 rounded-lg hover:bg-[#c09436] transition-all duration-300 flex items-center justify-center gap-2;
+}
+
+.btn-secondary {
+  @apply bg-transparent border border-[#d4a43c] text-[#d4a43c] font-medium py-2 px-4 rounded-lg hover:bg-[#d4a43c] hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center gap-2;
+}
+
+.card {
+  @apply bg-[#3a3a3a] rounded-xl p-6 shadow-lg;
+}
+
+.input-field {
+  @apply bg-[#444444] border border-[#555555] text-white rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[#d4a43c];
+}
+
+.select-field {
+  @apply bg-[#444444] border border-[#555555] text-white rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[#d4a43c];
+}
+
+.textarea-field {
+  @apply bg-[#444444] border border-[#555555] text-white rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-[#d4a43c];
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-bold text-[#d4a43c] mb-6;
+}
+
+.page-container {
+  @apply max-w-7xl mx-auto px-4 py-8;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
